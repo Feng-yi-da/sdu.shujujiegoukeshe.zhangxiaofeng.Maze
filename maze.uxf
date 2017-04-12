@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>5</x>
+      <y>320</y>
+      <w>185</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.Creat::Creat
+--
+-n: int
+-Maze[][]: int
+-MazeWay[]: int
+-Way[]: int
+-dengjia: Dengjialei
+-randomroom: Random
+-randomwall: Random
+--
++Creat(int Mazesize): ctor
++Wall(int Room, int Wall): int
++FindWay(): void
++GetSize(): int
++GetMaze(): int[][]
++GetMazeWay(): int[]
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>505</y>
+      <w>195</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.Creat::Dengjialei
+--
+-s: int[]
+--
++Dengjialei(int numElements): ctor
++union(int root1, int root2): void
++find(int x): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>455</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>635</x>
+      <y>500</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.Main::Main
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>90</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::PaintMazeWay
+--
+-serialVersionUID = 1: long
+-Room: int
+-Maze[][]: int
+-MazeWay[]: int
+-MazeWidth = 20: int
+-MazeSize: int
+-MazeBackgroundColor = Color.green: Color
+-MazeWallColor = Color.black: Color
+-Mazed: int
+--
++PaintMazeWay(int size, int maze[][], int mazeway[]): ctor
++paint(Graphics g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>325</x>
+      <y>305</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::MazeJframe
+--
+-Mazejf: JFrame
+-MazeCon: Container
+-creat: Creat
+-paint: PaintMaze
+-paintMazeWay: PaintMazeWay
+-contrelJpanel: ContrelJpanel
+-jTabbedPane: JTabbedPane
+--
++MazeJframe(int size): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>215</x>
+      <y>90</y>
+      <w>200</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::PaintMaze
+--
+-serialVersionUID = 1: long
+-Room: int
+-Maze[][]: int
+-MazeWay[]: int
+-MazeWidth = 20: int
+-MazeSize: int
+~MazeBackgroundColor = Color.blue: Color
+~MazeWallColor = Color.black: Color
+-Mazed: int
+--
++PaintMaze(int size, int maze[][], int mazeway[]): ctor
++paint(Graphics g): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>325</x>
+      <y>480</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::MazeHello
+--
+-mazehello: JFrame
+-MazeCon: Container
+-contrelJpanel: ContrelJpanel
+-icon: Icon
+-jLabel: JLabel
+--
++MazeHello(): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>320</y>
+      <w>255</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::ContrelJpanel
+--
+-startButton: StartButton
+-endButtton: EndButtton
+--
++ContrelJpanel(String Startname, JFrame CloseJframe, String Endname): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>915</x>
+      <y>260</y>
+      <w>200</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::StartButton
+--
+-InputString: String
+-number: int
+--
++StartButton(String ButtonName, JFrame CloseJframe): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>405</y>
+      <w>200</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>sdu.shujujiegoukeshe.zhangxiaofeng.Maze.View::EndButtton
+--
+--
++EndButtton(String ButtonName): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>305</x>
+      <y>210</y>
+      <w>75</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>205</y>
+      <w>75</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>400</y>
+      <w>15</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>510</y>
+      <w>125</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>445</x>
+      <y>370</y>
+      <w>190</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>360.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>340</y>
+      <w>90</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>285</y>
+      <w>75</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>350</y>
+      <w>70</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>185</x>
+      <y>360</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>140</y>
+      <w>80</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+</diagram>
